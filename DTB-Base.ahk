@@ -4,7 +4,7 @@
 ;; Selects random value between x and y
 ;;      Random, timer, x, y
 timer() {
-    Random, timer, 15000, 25000
+    Random, timer, 5000, 8000
     Sleep %timer%
 }
 
