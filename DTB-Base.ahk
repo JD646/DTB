@@ -221,7 +221,6 @@ owohr() {
 ;Hotkey Activator
 ;;Activates function when pressing shift + ctrl + Home
 +^Home::
-var = 1
 Loop 
 {
     if var = 0
@@ -247,6 +246,5 @@ return
 
 ;Hotkey Deactivator
 ;;Deactivates function when pressing shift + ctrl + End
-+^End::
-var = 0
++^End:: Exitapp
 return
