@@ -1,15 +1,6 @@
-;Discord Typing Bot
-
-;Timer Function:
-;; Selects random value between x and y
-;;      Random, timer, x, y
-timer() {
-    Random, timer, 5000, 8000
-    Sleep %timer%
-}
-
-----------------------------------------------
-;FUNCTIONS LIST
+;Discord Typing Bot - OwO Bot Functions
+-------------------------------------------------
+;OwO Bot Functions LIST
 
 ;Hunt Function:
 ;; sends "owoh" through chat
@@ -115,12 +106,30 @@ owoaw() {
     Send owo wc all {enter}
 }
 
-------------------------------------------------------
+;Check Checklist Function:
+;; sends "owo checklist" through chat
+
+owocl() {
+    SetKeyDelay, 50, -1
+    Send owo checklist {enter}
+}
+
+;Check Daily Function:
+;; sends "owo daily" through chat
+
+owod() {
+    SetKeyDelay, 50, -1
+    Send owo daily {enter}
+}
+
+
+;Discord Typing Bot - Randomizer Functions
+-------------------------------------------------
 ;Owo Randomizer
 ;;Sends a random owo command
 
 owoo() {
-    Random, word, 1, 11
+    Random, word, 1, 13
     if word = 1
     {
         owoz()
@@ -176,6 +185,16 @@ owoo() {
         owoaw()
         return
     }
+    else if word = 12
+    {
+        owocl()
+        return
+    }
+    else if word = 13
+    {
+        owod()
+        return
+    }
     else
     {
         SetKeyDelay, 50, -1
@@ -184,13 +203,31 @@ owoo() {
     }
 }
 
+-------------------------------------------------
+
 ;Randomizer Chance
 ;; x out of y chance of sending Owo Randomizer
 ;; Random, counter, x, y
 
 owor() {
     Random, counter, 1, 10
-    if counter <= 1
+    if counter <= 3
+    {
+        owoo()
+    }
+    else
+    {
+        return
+    }
+}
+
+;Present Randomizer Chance
+;; x out of y chance of sending Owo Randomizer
+;; Random, counter, x, y
+
+owopr() {
+    Random, pcounter, 1, 10
+    if pcounter <= 6
     {
         owoo()
     }
@@ -205,7 +242,7 @@ owor() {
 ;; Random, counter, x, y
 
 owohr() {
-    Random, hcounter, 1, 3
+    Random, hcounter, 1, 10
     if hcounter <= 3
     {
         owoh()
@@ -216,35 +253,3 @@ owohr() {
     }
 }
 
-
-----------------------------------------------------------
-;Hotkey Activator
-;;Activates function when pressing shift + ctrl + Home
-+^Home::
-Loop 
-{
-    if var = 0
-    {
-        break
-    }
-    if else var = 1
-    {
-        Sleep 1000
-        owob()
-        Sleep 750
-        owohr()
-        Sleep 500
-        owor()
-        timer()
-    }
-    else
-    {
-        return
-    }
-}
-return
-
-;Hotkey Deactivator
-;;Deactivates function when pressing shift + ctrl + End
-+^End:: Exitapp
-return

@@ -54,9 +54,9 @@ Loop
         ;dtimer()
         owob()
         dtimer()
-        owohr()
+        owoh()
         dtimer()
-        owor()
+        owopr()
         stimer()
         }
         mtimer()

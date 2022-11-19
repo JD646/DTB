@@ -10,50 +10,47 @@
 ;; Selects random value between x and y
 ;;      Random, timer, x, y
 dtimer() {
-    Random, dtimer, 750, 2000
+    Random, dtimer, 500, 750
     Sleep %dtimer%
 }
 
 ;Short Timer Function:
 ;; Selects random value between x and y
 ;;      Random, timer, x, y
-stimer() {
-    Random, stimer, 15000, 30000
+timer() {
+    Random, stimer, 2000, 5000
     Sleep %stimer%
-}
-
-;Medium Timer Function:
-;; Selects random value between x and y
-;;      Random, timer, x, y
-mtimer() {
-    Random, mtimer, 240000, 420000
-    Sleep %mtimer%
 }
 
 -------------------------------------------------
 ;Hotkey Activator
-;;Activates function when pressing shift + ctrl + Home
+;;Activates script when pressing shift + ctrl + Home
 +^Home::
 Loop 
 {
-    Random, sloop, 6, 10
-    Loop %sloop%
+    Random, lloop, 3, 3
+    Loop %lloop%
     {
-    ;owo()
-    ;dtimer()
-    owob()
-    dtimer()
-    owoh()
-    dtimer()
-    owopr()
-    stimer()
+        Random, sloop, 2, 2
+        Loop %sloop%
+        {
+        owob()
+        dtimer()
+        owoh()
+        dtimer()
+        owo()
+        timer()
+        }
+        SetKeyDelay, 50, -1
+        Send Shortloop completed {enter}
     }
-    mtimer()
+    SetKeyDelay, 50, -1
+    Send Longloop completed {enter}
 }
 return
 
 ;Hotkey Deactivator
-;;Deactivates function when pressing shift + ctrl + End
+;;Deactivates script when pressing shift + ctrl + End
 +^End::Reload
 
 ;Hotkey ShutDown
