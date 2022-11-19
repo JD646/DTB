@@ -26,7 +26,7 @@ stimer() {
 ;; Selects random value between x and y
 ;;      Random, timer, x, y
 mtimer() {
-    Random, mtimer, 240000, 420000
+    Random, mtimer, 240000, 480000
     Sleep %mtimer%
 }
 
