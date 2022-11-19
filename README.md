@@ -3,9 +3,9 @@ Discord Typing Bot for OwO bot farming
 Utilizes AutoHotKey
 
 Double click any file to start the script
-Start: CTRL + Shift + Home 
-Stop: CTRL + Shift + End
-End: CTRL + Shift + Del
+- Start: CTRL + Shift + Home 
+- Stop: CTRL + Shift + End
+- End: CTRL + Shift + Del
 
 
 DTB - AFK
