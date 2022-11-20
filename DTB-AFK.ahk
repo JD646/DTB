@@ -2,7 +2,7 @@
 -------------------------------------------------
 ;Import Function
 
-#Include %A_ScriptDir%\Randomizer_Functions.ahk
+#Include %A_ScriptDir%\OwO_Functions.ahk
 
 -------------------------------------------------
 
@@ -50,14 +50,14 @@ Loop
         Random, lloop, 15, 25
         Loop %lloop%
         {
-        ;owo()
-        ;dtimer()
-        owob()
-        dtimer()
-        owohr()
-        dtimer()
-        owor()
-        stimer()
+            ;owo()
+            ;dtimer()
+            owob()
+            dtimer()
+            owohr()
+            dtimer()
+            owor()
+            stimer()
         }
         mtimer()
     }

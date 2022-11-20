@@ -2,7 +2,7 @@
 -------------------------------------------------
 ;Import Function
 
-#Include %A_ScriptDir%\Randomizer_Functions.ahk
+#Include %A_ScriptDir%\OwO_Functions.ahk
 
 -------------------------------------------------
 
