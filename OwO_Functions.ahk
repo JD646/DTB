@@ -122,6 +122,29 @@ owod() {
     Send owo daily {enter}
 }
 
+;Sacrifice Dismantle Common Function:
+;; sends "owo dismantle common" through chat
+
+owowc() {
+    SetKeyDelay, 50, -1
+    Send owo dismantle common {enter}
+}
+
+;Sacrifice Dismantle Uncommon Function:
+;; sends "owo dismantle uncommon" through chat
+
+owowu() {
+    SetKeyDelay, 50, -1
+    Send owo dismantle uncommon {enter}
+}
+
+;Sacrifice Dismantle Rare Function:
+;; sends "owo dismantle common" through chat
+
+owowr() {
+    SetKeyDelay, 50, -1
+    Send owo dismantle rare {enter}
+}
 
 ;Discord Typing Bot - Randomizer Functions
 -------------------------------------------------
@@ -129,7 +152,7 @@ owod() {
 ;;Sends a random owo command
 
 owoo() {
-    Random, word, 1, 13
+    Random, word, 1, 16
     if word = 1
     {
         owoz()
@@ -195,6 +218,21 @@ owoo() {
         owod()
         return
     }
+    else if word = 14
+    {
+        owowc()
+        return
+    }
+    else if word = 15
+    {
+        owowu()
+        return
+    }
+    else if word = 16
+    {
+        owowr()
+        return
+    }
     else
     {
         SetKeyDelay, 50, -1
@@ -211,7 +249,7 @@ owoo() {
 
 owor() {
     Random, counter, 1, 10
-    if counter <= 3
+    if counter <= 4
     {
         owoo()
     }
