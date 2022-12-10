@@ -38,30 +38,44 @@ ltimer() {
     Sleep %ltimer%
 }
 
+;Break Timer Function:
+;; Selects random value between x and y
+;;      Random, ltimer, x, y
+btimer() {
+    Random, btimer, 5400000, 9000000
+    Sleep %btimer%
+}
+
+
 -------------------------------------------------
 ;Hotkey Activator
 ;;Activates function when pressing shift + ctrl + Home
 +^Home::
 Loop 
 {
-    Random, sloop, 4, 8
-    Loop %sloop%
+    Random, bloop, 1, 2
+    Loop %bloop%
     {
-        Random, lloop, 15, 25
-        Loop %lloop%
+        Random, sloop, 4, 8
+        Loop %sloop%
         {
-            ;owo()
-            ;dtimer()
-            owob()
-            dtimer()
-            owohr()
-            dtimer()
-            owor()
-            stimer()
+            Random, lloop, 15, 25
+            Loop %lloop%
+            {
+                ;owo()
+                ;dtimer()
+                owob()
+                dtimer()
+                owohr()
+                dtimer()
+                owor()
+                stimer()
+            }
+            mtimer()
         }
-        mtimer()
+        ltimer()
     }
-    ltimer()
+    btimer()
 }
 return
 

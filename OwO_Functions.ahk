@@ -146,13 +146,29 @@ owowr() {
     Send owo dismantle rare {enter}
 }
 
+;Coinflip Heads Function:
+;; sends "owo cf h 10" through chat
+
+owocfh() {
+    SetKeyDelay, 50, -1
+    Send owo cf h 10 {enter}
+}
+
+;Coinflip Tails Function:
+;; sends "owo cf h 10" through chat
+
+owocft() {
+    SetKeyDelay, 50, -1
+    Send owo cf t 10 {enter}
+}
+
 ;Discord Typing Bot - Randomizer Functions
 -------------------------------------------------
 ;Owo Randomizer
 ;;Sends a random owo command
 
 owoo() {
-    Random, word, 1, 16
+    Random, word, 1, 18
     if word = 1
     {
         owoz()
@@ -231,6 +247,16 @@ owoo() {
     else if word = 16
     {
         owowr()
+        return
+    }
+    else if word = 17
+    {
+        owocfh()
+        return
+    }
+    else if word = 18
+    {
+        owocft()
         return
     }
     else
