@@ -317,3 +317,18 @@ owohr() {
     }
 }
 
+;Random OwO Chance
+;; x out of y chance of sending Owo Randomizer
+;; Random, counter, x, y
+
+owoor() {
+    Random, counter, 1, 10
+    if counter <= 3
+    {
+        owo()
+    }
+    else
+    {
+        return
+    }
+}

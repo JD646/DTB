@@ -44,24 +44,29 @@ ltimer() {
 +^Home::
 Loop 
 {
-    Random, sloop, 4, 8
-    Loop %sloop%
+    Random, bloop, 2, 5
+    Loop %bloop%
     {
-        Random, lloop, 15, 25
-        Loop %lloop%
+        Random, sloop, 4, 8
+        Loop %sloop%
         {
-        ;owo()
-        ;dtimer()
-        owob()
-        dtimer()
-        owoh()
-        dtimer()
-        owopr()
-        stimer()
+            Random, lloop, 15, 25
+            Loop %lloop%
+            {
+                owoor()
+                dtimer()
+                owob()
+                dtimer()
+                owoh()
+                dtimer()
+                owor()
+                stimer()
+            }
+            mtimer()
         }
-        mtimer()
+        ltimer()
     }
-    ltimer()
+    btimer()
 }
 return
 

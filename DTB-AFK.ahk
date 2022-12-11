@@ -53,7 +53,7 @@ btimer() {
 +^Home::
 Loop 
 {
-    Random, bloop, 1, 2
+    Random, bloop, 4, 8
     Loop %bloop%
     {
         Random, sloop, 4, 8
@@ -62,8 +62,8 @@ Loop
             Random, lloop, 15, 25
             Loop %lloop%
             {
-                ;owo()
-                ;dtimer()
+                owoor()
+                dtimer()
                 owob()
                 dtimer()
                 owohr()

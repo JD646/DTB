@@ -5,6 +5,26 @@
 #Include %A_ScriptDir%\OwO_Functions.ahk
 
 -------------------------------------------------
+;Acc. Specific Commands
+
+;Cookie Function:
+;; sends "owo cookie @jojo" through chat
+
+owocook() {
+    SetKeyDelay, 50, -1
+    Send owo cookie @jojo{enter} {enter}
+}
+
+owopray() {
+    SetKeyDelay, 50, -1
+    Send owo pray @jojo{enter} {enter}
+}
+
+owocur() {
+    SetKeyDelay, 50, -1
+    Send owo curse @jojo{enter} {enter}
+}
+-------------------------------------------------
 
 ;Delay Timer Function:
 ;; Selects random value between x and y
@@ -34,12 +54,15 @@ Loop
         Random, sloop, 2, 2
         Loop %sloop%
         {
-        owob()
-        dtimer()
-        owoh()
-        dtimer()
-        owo()
-        timer()
+        owocook()
+        owocur()
+        owopray()
+        ; owob()
+        ; dtimer()
+        ; owoh()
+        ; dtimer()
+        ; owo()
+        ; timer()
         }
         SetKeyDelay, 50, -1
         Send Shortloop completed {enter}
